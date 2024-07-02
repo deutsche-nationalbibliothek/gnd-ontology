@@ -7,7 +7,7 @@ Die GND hat ihren Ursprung in der deutschen Bibliothekslandschaft und zielt dara
 Weitere Vokabulare, die für die Beschreibung der Daten der Deutschen Nationalbibliothek verwendet werden, werden in einem [eigenen Repository](https://github.com/deutsche-nationalbibliothek/lds-vocabulary) gepflegt.
 
 # Kommunikation
-Über Issues und Pull Requests können gerne Fehler oder Verbesserungsvorschläge eingebracht werden. Weitere Fragen oder Anregungen können über die [GND-Ontologie Mailingliste](gnd-ontology@lists.dnb.de) mitgeteilt werden. Oder per Mail an [metadatendienste@dnb.de](mailto:metadatendienste@dnb.de).
+Über Issues und Pull Requests können gerne Fehler oder Verbesserungsvorschläge eingebracht werden. Weitere Fragen oder Anregungen können über die [GND-Ontologie Mailingliste](mailto:gnd-ontology@lists.dnb.de) mitgeteilt werden. Oder per Mail an [metadatendienste@dnb.de](mailto:metadatendienste@dnb.de).
 
 # Lizenz
 
