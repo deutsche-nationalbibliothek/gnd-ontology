@@ -45,7 +45,7 @@ Commit-Nachrichten:
 
 ### Veröffentlichung neuer Vokabulareversionen
 
-Wir verwenden die semantische Versionierung in den Versionsnummern A.B.C, d.h. A wird erhöht, wenn es sich um eine Hauptversion handelt, die die Abwärtskompatibilität aufhebt; B wird erhöht, wenn es neue Begriffe gibt; C wird erhöht, wenn Fehler behoben wurden.
+Wir verwenden die semantische Versionierung in den Versionsnummern A.B.C, d.h. A wird erhöht, wenn es sich um eine Hauptversion handelt, die die Abwärtskompatibilität aufhebt; B wird erhöht, wenn es neue Begriffe gibt; C wird erhöht, wenn Fehler behoben wurden. (Mehr zum [Semantic Versioning](https://semver.org/lang/de/).)
 
 ### Du hast weitere Fragen?
 
