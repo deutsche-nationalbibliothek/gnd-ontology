@@ -7,7 +7,7 @@ Im Folgenden findest du eine Reihe von Richtlinien, wie du zu den Vokabularen un
 
 ### Wie kann ich beitragen?
 
-Wir freuen uns über Beiträge und ermutigen euch, Vorschläge einzureichen, indem ihr ein Issue in diesem GitHub-Repository erstellt.
+Wir freuen uns über Beiträge und ermutigen euch, Vorschläge einzureichen, indem ihr ein Issue oder einen Pull Request in diesem GitHub-Repository erstellt.
 
 ### Verbesserungsvorschläge
 
