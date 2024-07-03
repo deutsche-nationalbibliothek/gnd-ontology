@@ -6,11 +6,11 @@ Below you will find a set of guidelines on how to contribute to the vocabularies
 
 ### How can I contribute?
 
-We welcome contributions and encourage you to submit suggestions by creating an issue in this GitHub repository.
+We welcome contributions and encourage you to submit suggestions by creating an issue or a pull request in this GitHub repository.
 
 ### Suggestions for improvements
 
-This section explains how to submit suggestions for improvements to the vocabularies and ontologies. Following these guidelines will help maintainers and the community understand your suggestion and find related suggestions.
+This section explains how to submit suggestions for improvements to the vocabularies and ontologies. Following these guidelines will help maintainers and the community to understand your suggestion and find related suggestions.
 
 Before submitting an improvement suggestion, please perform a search to see if the improvement has already been suggested. If this is the case, add a comment to the existing suggestion instead of opening a new issue. When creating a suggestion, please provide as much detail as possible:
 
@@ -25,7 +25,7 @@ Please provide the following information:
 - Provide concrete examples to illustrate the steps. Include copy-pasted snippets used in these examples as Markdown code blocks.
 - Explain why this improvement would be useful for most users.
 
-#### Pull Requests
+#### Pull requests
 
 Please follow these steps to suggest contributions to the project.
 
@@ -45,7 +45,7 @@ Commit messages:
 
 ### Publishing new vocabulary versions
 
-We use semantic versioning in version numbers A.B.C, i.e. A is incremented if it is a major version that removes backward compatibility; B is incremented if there are new terms; C is incremented if bugs have been fixed.
+We use semantic versioning in version numbers A.B.C, i.e. A is incremented if it is a major version that removes backward compatibility; B is incremented if there are new terms; C is incremented if bugs have been fixed. (You can read more on [semantic versioning](https://semver.org/).)
 
 ### Do you have further questions?
 
