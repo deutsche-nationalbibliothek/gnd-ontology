@@ -4,7 +4,6 @@ Herzlich willkommen! Danke, dass du zu den Vokabularen und Ontologien der Deutsc
 
 Im Folgenden findest du eine Reihe von Richtlinien, wie du zu den Vokabularen und Ontologien beitragen kannst. Wir verwenden einen einfachen Workflow: der Main-Branch ist immer das aktuell gültige Release. Neue Versionen werden in Entwicklungszweigen vorbereitet, die nach einiger Zeit in den Main-Branch eingefügt werden und zu einem neuen Release führen. 
 
-
 ### Wie kann ich beitragen?
 
 Wir freuen uns über Beiträge und ermutigen euch, Vorschläge einzureichen, indem ihr ein Issue oder einen Pull Request in diesem GitHub-Repository erstellt.
@@ -34,7 +33,7 @@ Wenn du einen Pull Request einreichst, verwende einen aussagekräftigen Titel un
 
 ### Git Konventionen
 
-Git-Commits sollten so granular wie möglich sein. Wenn wir an der Behebung von Problem X arbeiten, versuchen wir nicht, andere Dinge, die uns auffallen (Formatierungen usw.), in denselben Commit aufzunehmen. Diese Dinge sollten in einem eigenen Commit in denselben Branch eingefügt werden. Commits sollten immer auf ein Issue verweisen (wie "#111"). Dies erleichtert die Überprüfung und das Verständnis jeder einzelnen Änderung in der Zukunft.
+Git-Commits sollten so granular wie möglich sein. Wenn wir an der Behebung von Problem X arbeiten, versuchen wir nicht, andere Dinge, die uns auffallen (Formatierungen usw.), in denselben Commit aufzunehmen. Diese Dinge sollten in einem eigenen Commit in denselben Branch eingefügt werden.
 
 Commit-Nachrichten:
 - Verwende den Imperativ in der Betreffzeile ("Add term" nicht "Added term").
@@ -43,15 +42,24 @@ Commit-Nachrichten:
 - Beende die Betreffzeile nicht mit einem Punkt.
 - Erkläre im Textkörper das Was und Warum, nicht das Wie (das im Diff zu sehen ist).
 
-### Veröffentlichung neuer Vokabulareversionen
+### Veröffentlichung neuer Vokabularversionen
 
 Wir verwenden die semantische Versionierung in den Versionsnummern A.B.C, d.h. A wird erhöht, wenn es sich um eine Hauptversion handelt, die die Abwärtskompatibilität aufhebt; B wird erhöht, wenn es neue Begriffe gibt; C wird erhöht, wenn Fehler behoben wurden. (Mehr zum [Semantic Versioning](https://semver.org/lang/de/).)
+
+### Danksagung
+
+Danke, für die Mitarbeit an den Vokabularen und Ontologien der Deutschen Nationalbibliothek! Wir verweisen auf alle, die über diesem Weg beitragen, über die Aussage:
+```
+<owl:Ontology rdf:about="https://d-nb.info/standards/elementset/gnd#"> <dct:contributor rdf:resource="#githubContributors" />
+      <foaf:Group rdf:about="#githubContributors">
+            <rdfs:label xml:lang="en">Github Contributors</rdfs:label>
+      </foaf:Group>
+```
+Für besondere Beiträge werden Beitragende im Einzellfall extra im jeweiligen Vokabular genannt.
 
 ### Du hast weitere Fragen?
 
 Wenn du Fragen zur Arbeit mit den Vokabularen und Ontologien der Deutschen Nationalbibliothek hast oder einfach nur mitteilen möchtest, woran du gerade arbeitest, besuche das [metadaten.community Forum](https://metadaten.community/).
-
-Für Fragen und Diskussionen zur GND Ontologie steht auch ein [Diskussionsbereich im Github Repository](https://github.com/deutsche-nationalbibliothek/gnd-ontology/discussions) zur Verfügung.
 
 Weiterhin hast du die Möglichkeit eine E-Mail zu schreiben
   * [Linked-Data-Service Mailingliste](mailto:lds@lists.dnb.de)
