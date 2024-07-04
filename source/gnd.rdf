@@ -238,6 +238,7 @@ Add new annotation property
 		<dct:creator rdf:resource="#alexanderHaffner" />
 		<dct:contributor rdf:resource="#dnbStaff" />
 		<dct:contributor rdf:resource="#listMembers" />
+		<dct:contributor rdf:resource="#githubContributors" />
 		<dct:publisher rdf:resource="http://ld.zdb-services.de/resource/organisations/DE-101" />
 		
 
@@ -257,6 +258,10 @@ Add new annotation property
 		<rdfs:label xml:lang="en">Members of the GND ontology mailing list</rdfs:label>
 		<foaf:mbox>gnd-ontology@lists.dnb.de</foaf:mbox>
 	</foaf:Organization>
+
+	<foaf:Group rdf:about="#githubContributors">
+		<rdfs:label xml:lang="en">Github Contributors</rdfs:label>
+	</foaf:Group>
 	
 	<!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
