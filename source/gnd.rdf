@@ -260,7 +260,8 @@ Add new annotation property
 	</foaf:Organization>
 
 	<foaf:Group rdf:about="#githubContributors">
-		<rdfs:label xml:lang="en">Github Contributors</rdfs:label>
+		<rdfs:label xml:lang="en">Github DNB Contributors</rdfs:label>
+		<rdfs:seeAlso rdf:resource="https://github.com/deutsche-nationalbibliothek/gnd-ontology/graphs/contributors"/>
 	</foaf:Group>
 	
 	<!-- 
