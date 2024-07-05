@@ -11,4 +11,4 @@ Weitere Vokabulare, die für die Beschreibung der Daten der Deutschen Nationalbi
 
 # Lizenz
 
-Die GND-Ontologie ist lizensiert unter [CC0](LICENSE).
+Die GND-Ontologie ist lizensiert unter [CC0 1.0](LICENSE).
