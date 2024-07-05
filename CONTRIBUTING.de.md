@@ -50,10 +50,17 @@ Wir verwenden die semantische Versionierung in den Versionsnummern A.B.C, d.h. A
 
 Danke, für die Mitarbeit an den Vokabularen und Ontologien der Deutschen Nationalbibliothek! Wir verweisen auf alle, die über diesem Weg beitragen, über die Aussage:
 ```
-<owl:Ontology rdf:about="https://d-nb.info/standards/elementset/gnd#"> <dct:contributor rdf:resource="#githubContributors" />
-      <foaf:Group rdf:about="#githubContributors">
-            <rdfs:label xml:lang="en">Github Contributors</rdfs:label>
-      </foaf:Group>
+@prefix : <https://d-nb.info/standards/elementset/gnd#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://d-nb.info/standards/elementset/gnd#> dct:contributor :githubContributors .
+
+:githubContributors
+    a foaf:Group ;
+    rdfs:label "Github DNB Contributors"@en ;
+    rdfs:seeAlso <https://github.com/deutsche-nationalbibliothek/gnd-ontology/graphs/contributors> .
 ```
 Für besondere Beiträge werden Beitragende im Einzellfall extra im jeweiligen Vokabular genannt.
 
