@@ -50,10 +50,17 @@ We use semantic versioning in version numbers A.B.C, i.e. A is incremented if it
 
 Thank you for contributing to the vocabularies and ontologies of the German National Library! We refer to all those who contribute via this way about the statement:
 ```
-<owl:Ontology rdf:about="https://d-nb.info/standards/elementset/gnd#"> <dct:contributor rdf:resource="#githubContributors" />
-      <foaf:Group rdf:about="#githubContributors">
-            <rdfs:label xml:lang="en">Github Contributors</rdfs:label>
-      </foaf:Group>
+@prefix : <https://d-nb.info/standards/elementset/gnd#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://d-nb.info/standards/elementset/gnd#> dct:contributor :githubContributors .
+
+:githubContributors
+    a foaf:Group ;
+    rdfs:label "Github DNB Contributors"@en ;
+    rdfs:seeAlso <https://github.com/deutsche-nationalbibliothek/gnd-ontology/graphs/contributors> .
 ```
 For special contributions, contributors are named separately in the respective vocabulary.
 
