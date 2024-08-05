@@ -1,0 +1,17 @@
+name: Check Serialization
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: arduino/setup-task@v2
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Check out Vocabulary Repository 📄
+      uses: actions/checkout@v4
+    - name: Run CI Tasks ⚙️
+      run: task ci

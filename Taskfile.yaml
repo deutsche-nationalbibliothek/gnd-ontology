@@ -1,0 +1,37 @@
+version: '3'
+
+vars:
+  UID:
+    sh: id -u
+  GID:
+    sh: id -g
+  SHELL_PWD:
+    sh: pwd
+
+  DOCKER_PWD: /data
+  DOCKER_DIRS: -v "{{.SHELL_PWD}}:{{.DOCKER_PWD}}" -w {{.DOCKER_PWD}}
+  DOCKER_PARAMS_DEFAULT: -u {{.UID}}:{{.GID}} --rm
+  DOCKER_PARAMS: '{{.DOCKER_PARAMS | default .DOCKER_PARAMS_DEFAULT }}'
+
+  RAPPER_IMAGE: docker.io/pheyvaer/raptor
+  RAPPER_DOCKER: docker run {{.DOCKER_PARAMS}} {{.DOCKER_DIRS}} {{.RAPPER_IMAGE}}
+  RAPPER_CMD: '{{.RAPPER_DOCKER}}'
+
+
+tasks:
+
+  default:
+    summary: List all tasks
+    silent: true
+    cmds:
+      - task --list
+
+  ci:
+    desc: Build tasks for the CI
+    cmds:
+      - task: check
+
+  check:
+    desc: Test that the serialization is still valid
+    cmds:
+      - "{{ .RAPPER_CMD }} -i rdfxml -c ./source/gnd.rdf"
