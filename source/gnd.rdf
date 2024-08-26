@@ -2614,7 +2614,14 @@ Add new annotation property
     <marc21equivalent>065 $a $2=sswd</marc21equivalent>
   </owl:ObjectProperty>
 
+<!-- https://d-nb.info/standards/elementset/gnd#hasRelationship -->
 
+ <owl:ObjectProperty rdf:about="https://d-nb.info/standards/elementset/gnd#hasRelationship">
+    	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    	<rdfs:isDefinedBy rdf:resource="https://d-nb.info/standards/elementset/gnd#"/>
+    <rdfs:label xml:lang="de">hat Beziehung</rdfs:label>
+    <rdfs:label xml:lang="en">has relationship</rdfs:label>
+  </owl:ObjectProperty>
 
   <!-- https://d-nb.info/standards/elementset/gnd#hierarchicalSuperior -->
 
@@ -2624,8 +2631,6 @@ Add new annotation property
     <rdfs:label xml:lang="de">Administrative Überordnung</rdfs:label>
     <rdfs:label xml:lang="en">Hierarchical superior</rdfs:label>
   </owl:ObjectProperty>
-
-
 
   <!-- https://d-nb.info/standards/elementset/gnd#hierarchicalSuperiorOfPlaceOrGeographicName -->
 
