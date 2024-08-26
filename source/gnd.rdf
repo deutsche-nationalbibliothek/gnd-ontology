@@ -6629,6 +6629,17 @@ Add new annotation property
     <marc21equivalent>400 $4=nawi</marc21equivalent>
   </owl:Class>
 
+<!-- https://d-nb.info/standards/elementset/gnd#Relationship -->
+
+<owl:Class rdf:about="https://d-nb.info/standards/elementset/gnd#Relationship">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="https://d-nb.info/standards/elementset/gnd#"/>
+    <rdfs:label xml:lang="de">Beziehung</rdfs:label>
+    <rdfs:label xml:lang="en">Relationship</rdfs:label>
+    <rdfs:comment xml:lang="de">Klasse für eine Beziehung, um die an der Beziehung beteiligten Ressourcen miteinander in Beziehung zu setzen und sie weiter zu qualifizieren.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Class for a relationship in order to relate the resources involved in the relationship to each other and to qualify them further.</rdfs:comment>
+</owl:Class>
+
 	<!-- https://d-nb.info/standards/elementset/gnd#ReligiousAdministrativeUnit -->
 	
 	<owl:Class rdf:about="https://d-nb.info/standards/elementset/gnd#ReligiousAdministrativeUnit">
