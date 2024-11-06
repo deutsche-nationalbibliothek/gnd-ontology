@@ -23,17 +23,23 @@
 		
 		<!-- Versioning information -->
 		<dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-30</dct:issued>
-		<dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-09-19T11:50:00+02:00</dct:modified>
-		<dct:available rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-06</dct:available>
-		<owl:versionInfo>1.19</owl:versionInfo>
+		<dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-08-26T09:45:00+02:00</dct:modified>
+		<dct:available rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-08-28</dct:available>
+		<owl:versionInfo>1.2.0</owl:versionInfo>
 		<adms:versionNotes xml:lang="en">
+Changes from 2023-09-20 to 2024-08-26
 
-Changes from 2023-06-26 to 2023-09-19
+Add new datatype property
+  - #hasRelationship
+Add new class
+  - #Relationship
+
+*Changes from 2023-06-26 to 2023-09-19
 
 Add new datatype property
   - #originalScriptNameOfThePerson
 
-*Changes from 2023-06-06 to 2023-06-26
+Changes from 2023-06-06 to 2023-06-26
 
 Add new datatype property
   - #usingInstructions 
@@ -238,6 +244,7 @@ Add new annotation property
 		<dct:creator rdf:resource="#alexanderHaffner" />
 		<dct:contributor rdf:resource="#dnbStaff" />
 		<dct:contributor rdf:resource="#listMembers" />
+		<dct:contributor rdf:resource="#githubContributors" />
 		<dct:publisher rdf:resource="http://ld.zdb-services.de/resource/organisations/DE-101" />
 		
 
@@ -257,6 +264,11 @@ Add new annotation property
 		<rdfs:label xml:lang="en">Members of the GND ontology mailing list</rdfs:label>
 		<foaf:mbox>gnd-ontology@lists.dnb.de</foaf:mbox>
 	</foaf:Organization>
+
+	<foaf:Group rdf:about="#githubContributors">
+		<rdfs:label xml:lang="en">Github DNB Contributors</rdfs:label>
+		<rdfs:seeAlso rdf:resource="https://github.com/deutsche-nationalbibliothek/gnd-ontology/graphs/contributors"/>
+	</foaf:Group>
 	
 	<!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -2608,7 +2620,14 @@ Add new annotation property
     <marc21equivalent>065 $a $2=sswd</marc21equivalent>
   </owl:ObjectProperty>
 
+  <!-- https://d-nb.info/standards/elementset/gnd#hasRelationship -->
 
+  <owl:ObjectProperty rdf:about="https://d-nb.info/standards/elementset/gnd#hasRelationship">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="https://d-nb.info/standards/elementset/gnd#"/>
+    <rdfs:label xml:lang="de">hat Beziehung</rdfs:label>
+    <rdfs:label xml:lang="en">has relationship</rdfs:label>
+  </owl:ObjectProperty>
 
   <!-- https://d-nb.info/standards/elementset/gnd#hierarchicalSuperior -->
 
@@ -2618,8 +2637,6 @@ Add new annotation property
     <rdfs:label xml:lang="de">Administrative Überordnung</rdfs:label>
     <rdfs:label xml:lang="en">Hierarchical superior</rdfs:label>
   </owl:ObjectProperty>
-
-
 
   <!-- https://d-nb.info/standards/elementset/gnd#hierarchicalSuperiorOfPlaceOrGeographicName -->
 
@@ -6616,6 +6633,17 @@ Add new annotation property
 	<rdfs:comment xml:lang="en">The person’s real name</rdfs:comment>
     <rdfs:subClassOf rdf:resource="https://d-nb.info/standards/elementset/gnd#VariantNameOfThePerson"/>
     <marc21equivalent>400 $4=nawi</marc21equivalent>
+  </owl:Class>
+
+  <!-- https://d-nb.info/standards/elementset/gnd#Relationship -->
+
+  <owl:Class rdf:about="https://d-nb.info/standards/elementset/gnd#Relationship">
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:isDefinedBy rdf:resource="https://d-nb.info/standards/elementset/gnd#"/>
+      <rdfs:label xml:lang="de">Beziehung</rdfs:label>
+      <rdfs:label xml:lang="en">Relationship</rdfs:label>
+      <rdfs:comment xml:lang="de">Klasse für eine Beziehung, um die an der Beziehung beteiligten Ressourcen miteinander in Beziehung zu setzen und sie weiter zu qualifizieren.</rdfs:comment>
+      <rdfs:comment xml:lang="en">Class for a relationship in order to relate the resources involved in the relationship to each other and to qualify them further.</rdfs:comment>
   </owl:Class>
 
 	<!-- https://d-nb.info/standards/elementset/gnd#ReligiousAdministrativeUnit -->
