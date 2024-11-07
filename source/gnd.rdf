@@ -234,8 +234,8 @@ Add new annotation property
 			gndo:PseudonymNameOfTheperson (new class)
 
 </adms:versionNotes>
-		<owl:priorVersion rdf:resource="https://d-nb.info/standards/elementset/gnd_20240626" />
-		<owl:versionIRI rdf:resource="https://d-nb.info/standards/elementset/gnd_20240206" />
+		<owl:priorVersion rdf:resource="https://d-nb.info/standards/elementset/gnd_20240206" />
+		<owl:versionIRI rdf:resource="https://d-nb.info/standards/elementset/gnd_20240806" />
 
 		<!-- Rights information -->
 		<dct:rights>Copyright 2012-2023 Deutsche Nationalbibliothek</dct:rights>
