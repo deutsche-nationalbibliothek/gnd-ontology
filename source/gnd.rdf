@@ -23,13 +23,19 @@
 		
 		<!-- Versioning information -->
 		<dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-30</dct:issued>
-		<dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-08-26T09:45:00+02:00</dct:modified>
-		<dct:available rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-08-28</dct:available>
-		<owl:versionInfo>1.2.0</owl:versionInfo>
+		<dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-12-02T09:45:00+02:00</dct:modified>
+		<dct:available rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-12-03</dct:available>
+		<owl:versionInfo>1.3.0</owl:versionInfo>
 		<adms:versionNotes xml:lang="en">
-Changes from 2023-09-20 to 2024-08-26
+Changes from 2023-09-20 to 2024-12-02
 
 Add new datatype property
+  - #pseudonymNameOfThePerson
+  - #realNameOfThePerson
+  - #earlierNameOfThePerson
+  - #fullerFormOfNameOfThePerson
+  - #laterNameOfThePerson
+  - #variantNameOfThePerson
   - #hasRelationship
 Add new class
   - #Relationship
@@ -234,8 +240,8 @@ Add new annotation property
 			gndo:PseudonymNameOfTheperson (new class)
 
 </adms:versionNotes>
-		<owl:priorVersion rdf:resource="https://d-nb.info/standards/elementset/gnd_20240206" />
-		<owl:versionIRI rdf:resource="https://d-nb.info/standards/elementset/gnd_20240806" />
+		<owl:priorVersion rdf:resource="https://d-nb.info/standards/elementset/gnd_20240806" />
+		<owl:versionIRI rdf:resource="https://d-nb.info/standards/elementset/gnd_20241202" />
 
 		<!-- Rights information -->
 		<dct:rights>Copyright 2012-2024 Deutsche Nationalbibliothek</dct:rights>
