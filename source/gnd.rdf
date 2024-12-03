@@ -5410,7 +5410,16 @@ Add new annotation property
     <superPropertyOf rdf:resource="http://purl.org/dc/terms/definition"/>
   </owl:DatatypeProperty>
 
+  <!-- https://d-nb.info/standards/elementset/gnd#earlierNameOfThePerson -->
 
+  <owl:DatatypeProperty rdf:about="https://d-nb.info/standards/elementset/gnd#earlierNameOfThePerson">
+  <rdfs:subPropertyOf rdf:resource="https://d-nb.info/standards/elementset/gnd#variantNameOfThePerson"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:isDefinedBy rdf:resource="https://d-nb.info/standards/elementset/gnd#"/>
+    <rdfs:label xml:lang="de">Früherer Name der Person</rdfs:label>
+    <rdfs:label xml:lang="en">Earlier name of the person</rdfs:label>
+    <marc21equivalent>400 $4=nafr</marc21equivalent>
+  </owl:DatatypeProperty>
 
   <!-- https://d-nb.info/standards/elementset/gnd#easternmostLongitude -->
 
@@ -5480,7 +5489,16 @@ Add new annotation property
     <marc21equivalent>550 $a $g $4=funk</marc21equivalent>
   </owl:DatatypeProperty>
 
+  <!-- https://d-nb.info/standards/elementset/gnd#fullerFormOfNameOfThePerson -->
 
+  <owl:DatatypeProperty rdf:about="https://d-nb.info/standards/elementset/gnd#fullerFormOfNameOfThePerson">
+  <rdfs:subPropertyOf rdf:resource="https://d-nb.info/standards/elementset/gnd#variantNameOfThePerson"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:isDefinedBy rdf:resource="https://d-nb.info/standards/elementset/gnd#"/>
+    <rdfs:label xml:lang="de">Vollständiger Name der Person</rdfs:label>
+    <rdfs:label xml:lang="en">Fuller form of the name of the person</rdfs:label>
+    <marc21equivalent>400 $4=navo</marc21equivalent>
+  </owl:DatatypeProperty>
 
   <!-- https://d-nb.info/standards/elementset/gnd#gndIdentifier -->
 
@@ -5524,8 +5542,6 @@ Add new annotation property
     <superPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60580"/>
   </owl:DatatypeProperty>
 
-
-
   <!-- https://d-nb.info/standards/elementset/gnd#keyOfTheWork -->
 
   <owl:DatatypeProperty rdf:about="https://d-nb.info/standards/elementset/gnd#keyOfTheWork">
@@ -5537,6 +5553,17 @@ Add new annotation property
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     <marc21equivalent>384 0# $a</marc21equivalent>
     <superPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60580"/>
+  </owl:DatatypeProperty>
+
+  <!-- https://d-nb.info/standards/elementset/gnd#laterNameOfThePerson -->
+
+  <owl:DatatypeProperty rdf:about="https://d-nb.info/standards/elementset/gnd#laterNameOfThePerson">
+  <rdfs:subPropertyOf rdf:resource="https://d-nb.info/standards/elementset/gnd#variantNameOfThePerson"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:isDefinedBy rdf:resource="https://d-nb.info/standards/elementset/gnd#"/>
+    <rdfs:label xml:lang="de">Späterer Name der Person</rdfs:label>
+    <rdfs:label xml:lang="en">Later name of the person</rdfs:label>
+    <marc21equivalent>400 $4=nasp</marc21equivalent>
   </owl:DatatypeProperty>
 
   <!-- https://d-nb.info/standards/elementset/gnd#mediumOfPerformanceAsLiteral -->
@@ -5793,7 +5820,16 @@ Add new annotation property
     <marc21equivalent>400 $a</marc21equivalent>
   </owl:DatatypeProperty>
 
+  <!-- https://d-nb.info/standards/elementset/gnd#pseudonymNameOfThePerson -->
 
+  <owl:DatatypeProperty rdf:about="https://d-nb.info/standards/elementset/gnd#pseudonymNameOfThePerson">
+  <rdfs:subPropertyOf rdf:resource="https://d-nb.info/standards/elementset/gnd#variantNameOfThePerson"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:isDefinedBy rdf:resource="https://d-nb.info/standards/elementset/gnd#"/>
+    <rdfs:label xml:lang="de">Pseudonym der Person</rdfs:label>
+    <rdfs:label xml:lang="en">Pseudonym name of the person</rdfs:label>
+    <marc21equivalent>400 $4=pseu</marc21equivalent>
+  </owl:DatatypeProperty>
 
   <!-- https://d-nb.info/standards/elementset/gnd#publication -->
 
@@ -5816,7 +5852,16 @@ Add new annotation property
     <superPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/publications"/>
   </owl:DatatypeProperty>
 
+  <!-- https://d-nb.info/standards/elementset/gnd#realNameOfThePerson -->
 
+  <owl:DatatypeProperty rdf:about="https://d-nb.info/standards/elementset/gnd#realNameOfThePerson">
+  <rdfs:subPropertyOf rdf:resource="https://d-nb.info/standards/elementset/gnd#variantNameOfThePerson"/>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:isDefinedBy rdf:resource="https://d-nb.info/standards/elementset/gnd#"/>
+    <rdfs:label xml:lang="de">Wirklicher Name der Person</rdfs:label>
+    <rdfs:label xml:lang="en">Real name of the person</rdfs:label>
+    <marc21equivalent>400 $4=nawi</marc21equivalent>
+  </owl:DatatypeProperty>
 
   <!-- https://d-nb.info/standards/elementset/gnd#serialNumericDesignationOfMusicalWork -->
 
@@ -5975,6 +6020,16 @@ Add new annotation property
       </owl:Class>
     </rdfs:domain>
  </owl:DatatypeProperty>
+
+ <!-- https://d-nb.info/standards/elementset/gnd#variantNameOfThePerson -->
+
+  <owl:DatatypeProperty rdf:about="https://d-nb.info/standards/elementset/gnd#variantNameOfThePerson">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:isDefinedBy rdf:resource="https://d-nb.info/standards/elementset/gnd#"/>
+    <rdfs:label xml:lang="de">Abweichender Name der Person</rdfs:label>
+    <rdfs:label xml:lang="en">Variant name of the person</rdfs:label>
+    <marc21equivalent>400</marc21equivalent>
+  </owl:DatatypeProperty>
 
   <!-- https://d-nb.info/standards/elementset/gnd#westernmostLongitude -->
 
