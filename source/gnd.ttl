@@ -14,22 +14,31 @@
     cc:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
     dc:description "GND stands for Gemeinsame Normdatei (Integrated Authority File) and offers a broad range of elements to describe authorities. The GND originates from the German library community and aims to solve the name ambiguity problem in the library world."@en ;
     dc:title "GND Ontology"@en, "GND-Ontologie"@de ;
-    dct:available "2024-12-03"^^xsd:date ;
+    dct:available "2025-04-10"^^xsd:date ;
     dct:contributor :dnbStaff, :githubContributors, :listMembers ;
     dct:creator :alexanderHaffner ;
     dct:issued "2012-06-30"^^xsd:date ;
     dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
-    dct:modified "2024-12-02T09:45:00+02:00"^^xsd:dateTime ;
+    dct:modified "2025-04-08T11:45:00+02:00"^^xsd:dateTime ;
     dct:publisher <http://ld.zdb-services.de/resource/organisations/DE-101> ;
-    dct:rights "Copyright 2012-2024 Deutsche Nationalbibliothek" ;
+    dct:rights "Copyright 2012-2025 Deutsche Nationalbibliothek" ;
     vann:preferredNamespacePrefix "gndo" ;
     vann:preferredNamespaceUri "https://d-nb.info/standards/elementset/gnd#" ;
     a <http://purl.org/vocommons/voaf#Vocabulary>, owl:Ontology ;
-    owl:priorVersion <https://d-nb.info/standards/elementset/gnd_20240806> ;
-    owl:versionIRI <https://d-nb.info/standards/elementset/gnd_20241202> ;
-    owl:versionInfo "1.3.0" ;
+    owl:priorVersion <https://d-nb.info/standards/elementset/gnd_20241202> ;
+    owl:versionIRI <https://d-nb.info/standards/elementset/gnd_20250410> ;
+    owl:versionInfo "1.4.0" ;
     adms:versionNotes """
-Changes from 2023-09-20 to 2024-12-02
+Changes from 2024-12-03 to 2025-04-08
+
+Add new object property
+  - #variantNameEntityForTheCorporateBody
+  - #variantNameEntityForTheConferenceOrEvent
+  - #variantNameEntityForTheWork
+  - #variantNameEntityForTheSubjectHeading
+  - #variantNameEntityForThePlaceOrGeographicName
+
+*Changes from 2023-09-20 to 2024-12-02
 
 Add new datatype property
   - #pseudonymNameOfThePerson
@@ -42,7 +51,7 @@ Add new datatype property
 Add new class
   - #Relationship
 
-*Changes from 2023-06-26 to 2023-09-19
+Changes from 2023-06-26 to 2023-09-19
 
 Add new datatype property
   - #originalScriptNameOfThePerson
@@ -4247,6 +4256,12 @@ Changes from 2019-10-15 to 2022-02-08
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50025>, :variantName ;
     :marc21equivalent "411 $a $c $d $e $g $n" .
 
+:variantNameEntityForTheConferenceOrEvent
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain :ConferenceOrEvent ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/gnd#> ;
+    rdfs:label "Variant name entity for the conference or event"@en, "Variante Namensentität der Konferenz oder Veranstaltung"@de .
+
 :variantNameForTheCorporateBody
     a rdf:Property, owl:AnnotationProperty ;
     rdfs:domain :CorporateBody ;
@@ -4255,6 +4270,12 @@ Changes from 2019-10-15 to 2022-02-08
     rdfs:range rdfs:Literal ;
     rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50025>, foaf:name, :variantName ;
     :marc21equivalent "410 $a $b $g $n" .
+
+:variantNameEntityForTheCorporateBody
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain :CorporateBody ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/gnd#> ;
+    rdfs:label "Variant name entity for the corporate body"@en, "Variante Namensentität der Körperschaft"@de .
 
 :variantNameForTheFamily
     a rdf:Property, owl:AnnotationProperty ;
@@ -4282,6 +4303,12 @@ Changes from 2019-10-15 to 2022-02-08
     rdfs:subPropertyOf :variantName ;
     :marc21equivalent "451 $a $g $z" .
 
+:variantNameEntityForThePlaceOrGeographicName
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain :PlaceOrGeographicName ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/gnd#> ;
+    rdfs:label "Variant name entity for the place or geographic name"@en, "Variante Namensentität des Geografikum"@de .
+
 :variantNameForTheSubjectHeading
     a rdf:Property, owl:AnnotationProperty ;
     rdfs:domain :SubjectHeading ;
@@ -4292,6 +4319,12 @@ Changes from 2019-10-15 to 2022-02-08
     owl:equivalentProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
     :marc21equivalent "450 $a $g" .
 
+:variantNameEntityForTheSubjectHeading
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain :SubjectHeading ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/gnd#> ;
+    rdfs:label "Variant name entity for the subject heading"@en, "Variante Namensentität des Schlagworts"@de .
+
 :variantNameForTheWork
     a rdf:Property, owl:AnnotationProperty ;
     rdfs:domain :Work ;
@@ -4300,6 +4333,12 @@ Changes from 2019-10-15 to 2022-02-08
     rdfs:range rdfs:Literal ;
     rdfs:subPropertyOf :variantName ;
     :marc21equivalent "430 $a $f $g $m $n $o $p $r $s" .
+
+:variantNameEntityForTheWork
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:domain :Work ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/gnd#> ;
+    rdfs:label "Variant name entity for the work"@en, "Variante Namensentität des Werks"@de .
 
 :variantNameOfThePerson
     a rdf:Property, owl:DatatypeProperty ;
