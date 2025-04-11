@@ -34,4 +34,4 @@ tasks:
   check:
     desc: Test that the serialization is still valid
     cmds:
-      - "{{ .RAPPER_CMD }} -i rdfxml -c ./source/gnd.rdf"
+      - "{{ .RAPPER_CMD }} -i turtle -c ./source/gnd.ttl"
