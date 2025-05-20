@@ -1,0 +1,20 @@
+title: GND Ontology
+baseurl: "/standards/elementset" # the subpath of your site, e.g. /blog
+url: "https://d-nb.info" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+markdown: kramdown
+# theme: jekyll-theme-jod
+plugins:
+  - liquid-md5
+
+exclude: ["docs", "Gemfile", "Gemfile.lock", "README.md", "gnd.ttl", "src", "*.json", "*.js"]
+
+jekyll_rdf:
+    path: "source/gnd.ttl"
+    include_blank: true
+    restriction: "SELECT ?resourceUri WHERE { ?resourceUri ?p ?o . FILTER regex(str(?resourceUri), \"https://d-nb.info/standards/elementset/gnd\") }"
+    class_template_mappings:
+      "http://www.w3.org/2002/07/owl#Ontology": "ontology"
+    #instance_template_mappings :
+    #  "https://d-nb.info/standards/elementset/gnd" : 'ontology.html'

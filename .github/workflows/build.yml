@@ -1,0 +1,26 @@
+# Build Jekyll Page and publish it to GitHub Pages
+name: Build Jekyll Page
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build Jekyll-RDF Site ⚙️
+      run: |
+           docker run --rm \
+           --workdir /github/workspace \
+           -v ${{ github.workspace }}:/github/workspace -v ${{ github.workspace }}/_site:/github/workspace/_site \
+           -e TZ=Europe/Berlin -e JEKYLL_UID="$UID" -e JEKYLL_GID="$GID" \
+           jekyll/builder jekyll build
+    - name: Deploy 🚀
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./_site
