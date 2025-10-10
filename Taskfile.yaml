@@ -17,6 +17,11 @@ vars:
   RAPPER_DOCKER: docker run {{.DOCKER_PARAMS}} {{.DOCKER_DIRS}} {{.RAPPER_IMAGE}}
   RAPPER_CMD: '{{.RAPPER_DOCKER}}'
 
+  JOD_IMAGE: ghcr.io/eccenca/jod:main
+  JOD_DOCKER_PARAMS: -e JOD_TITLE="DOWARC" -e JOD_CONFIG_BASEURL=https://github.com -e JOD_CONFIG_URL=/DOWARC/dowarc# -e JOD_URL=https://github.com/DOWARC/dowarc# -e JOD_RESTRICTION_URL=True
+  JOD_PARAMS: jekyll build --disable-disk-cache
+  JOD_DOCKER: docker run {{.DOCKER_PARAMS}} {{.DOCKER_DIRS}} {{.JOD_DOCKER_PARAMS}} {{.JOD_IMAGE}} {{.JOD_PARAMS}}
+  JOD_CMD: '{{.JOD_DOCKER}}'
 
 tasks:
 
@@ -30,8 +35,16 @@ tasks:
     desc: Build tasks for the CI
     cmds:
       - task: check
+      - task: documentation
 
   check:
     desc: Test that the serialization is still valid
     cmds:
       - "{{ .RAPPER_CMD }} -i turtle -c ./source/gnd.ttl"
+
+  documentation:
+    aliases: [docu]
+    desc: Build the vocabulary documentation
+    cmds:
+      - "{{ .JOD_CMD }}"
+
