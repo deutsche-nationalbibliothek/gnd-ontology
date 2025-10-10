@@ -1,14 +1,13 @@
 title: GND Ontology
-baseurl: "/standards/elementset" # the subpath of your site, e.g. /blog
-url: "https://d-nb.info" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/standards/elementset"
+url: "https://github.com" 
 
 # Build settings
-markdown: kramdown
-# theme: jekyll-theme-jod
+theme: jekyll-theme-jod
 plugins:
   - liquid-md5
 
-exclude: ["docs", "Gemfile", "Gemfile.lock", "README.md", "gnd.ttl", "src", "*.json", "*.js"]
+exclude: ["Gemfile", "Gemfile.lock", "gnd.ttl", "Taskfile.yaml", "README.md", "CONTRIBUTING.de.md", "CONTRIBUTING.md", "LICENSE"]
 
 jekyll_rdf:
     path: "source/gnd.ttl"
