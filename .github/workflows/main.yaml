@@ -15,3 +15,8 @@ jobs:
       uses: actions/checkout@v4
     - name: Run CI Tasks ⚙️
       run: task ci
+    - name: Deploy 🚀
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./_site
