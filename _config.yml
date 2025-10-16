@@ -1,6 +1,6 @@
 title: GND Ontology
-baseurl: "/standards/elementset"
-url: "https://github.com" 
+baseurl: "/standards/elementset" #/gnd #/gnd#
+url: "https://d-nb.info" 
 
 # Build settings
 theme: jekyll-theme-jod
