@@ -1,5 +1,5 @@
 title: GND Ontology
-baseurl: "/standards/elementset" #/gnd #/gnd#
+baseurl: "/standards/elementset/gnd#" #/gnd #/gnd#
 url: "https://d-nb.info" 
 
 # Build settings
