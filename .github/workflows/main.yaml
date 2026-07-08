@@ -12,6 +12,6 @@ jobs:
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
     - name: Check out Vocabulary Repository 📄
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
     - name: Run CI Tasks ⚙️
       run: task ci
