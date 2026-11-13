@@ -344,6 +344,11 @@ Changes from 2019-10-15 to 2022-02-08
     rdfs:subClassOf :PlaceOrGeographicName ;
     :marc21equivalent "079 $v=gil" .
 
+:DateSpecification
+    a rdfs:Class, owl:Class ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/gnd#> ;
+    rdfs:label "Date specification"@en, "Datumsspezifikation"@de .
+
 :DifferentiatedPerson
     a rdfs:Class, owl:Class ;
     rdfs:isDefinedBy <https://d-nb.info/standards/elementset/gnd#> ;
@@ -1714,7 +1719,7 @@ Changes from 2019-10-15 to 2022-02-08
 :dateOfBirth
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Das Geburtsdatum einer Person. Dies kann ein Jahr, eine Kombination von Jahr und Monat oder ein vollständiges Datum sein."@de, "The birth date of a person. This can be a year, a year-month combination or a full date."@en ;
-    rdfs:domain :DifferentiatedPerson ;
+    rdfs:domain :DifferentiatedPerson, :DateSpecification ;
     rdfs:isDefinedBy <https://d-nb.info/standards/elementset/gnd#> ;
     rdfs:label "Date of birth"@en, "Geburtsdatum"@de ;
     rdfs:range [
@@ -1731,7 +1736,7 @@ Changes from 2019-10-15 to 2022-02-08
 
 :dateOfBirthAndDeath
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:domain :DifferentiatedPerson ;
+    rdfs:domain :DifferentiatedPerson, :DateSpecification ;
     rdfs:isDefinedBy <https://d-nb.info/standards/elementset/gnd#> ;
     rdfs:label "Date of birth and death"@en, "Geburts- und Sterbedatum"@de ;
     rdfs:range [
@@ -1764,7 +1769,7 @@ Changes from 2019-10-15 to 2022-02-08
 :dateOfDeath
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Das Sterbedatum einer Person. Dies kann ein Jahr, eine Kombination von Jahr und Monat oder ein vollständiges Datum sein."@de, "The death date of a person. This can be a year, a year-month combination or a full date."@en ;
-    rdfs:domain :DifferentiatedPerson ;
+    rdfs:domain :DifferentiatedPerson, :DateSpecification ;
     rdfs:isDefinedBy <https://d-nb.info/standards/elementset/gnd#> ;
     rdfs:label "Date of death"@en, "Sterbedatum"@de ;
     rdfs:range [
