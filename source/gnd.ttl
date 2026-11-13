@@ -14,20 +14,20 @@
     cc:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
     dc:description "GND stands for Gemeinsame Normdatei (Integrated Authority File) and offers a broad range of elements to describe authorities. The GND originates from the German library community and aims to solve the name ambiguity problem in the library world."@en ;
     dc:title "GND Ontology"@en, "GND-Ontologie"@de ;
-    dct:available "2025-12-16"^^xsd:date ;
+    dct:available "2026-11-13"^^xsd:date ;
     dct:contributor :dnbStaff, :githubContributors, :listMembers ;
     dct:creator :alexanderHaffner ;
     dct:issued "2012-06-30"^^xsd:date ;
     dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
-    dct:modified "2025-12-16T12:00:00+02:00"^^xsd:dateTime ;
+    dct:modified "2026-11-13T12:00:00+02:00"^^xsd:dateTime ;
     dct:publisher <http://ld.zdb-services.de/resource/organisations/DE-101> ;
-    dct:rights "Copyright 2012-2025 Deutsche Nationalbibliothek" ;
+    dct:rights "Copyright 2012-2026 Deutsche Nationalbibliothek" ;
     vann:preferredNamespacePrefix "gndo" ;
     vann:preferredNamespaceUri "https://d-nb.info/standards/elementset/gnd#" ;
     a <http://purl.org/vocommons/voaf#Vocabulary>, owl:Ontology ;
-    owl:priorVersion <https://d-nb.info/standards/elementset/gnd_20250410> ;
-    owl:versionIRI <https://d-nb.info/standards/elementset/gnd_20251216> ;
-    owl:versionInfo "1.5.0" ;
+    owl:priorVersion <https://d-nb.info/standards/elementset/gnd_20251216> ;
+    owl:versionIRI <https://d-nb.info/standards/elementset/gnd_20261113> ;
+    owl:versionInfo "1.6.0" ;
     adms:versionNotes """
 Changes from 2025-12-16 to 2026-11-13
 
