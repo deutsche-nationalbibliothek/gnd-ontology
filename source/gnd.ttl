@@ -29,12 +29,22 @@
     owl:versionIRI <https://d-nb.info/standards/elementset/gnd_20251216> ;
     owl:versionInfo "1.5.0" ;
     adms:versionNotes """
+Changes from 2025-12-16 to 2026-11-13
+
+Add new object property
+  - #relatedEntity
+
+Add new class
+  - #DateSpecification
+
+Change rdfs:domain statement for dateOfBirth, dateOfDeath and dateOfBirthAndDeath
+
 Changes from 2025-04-09 to 2025-12-16
 
 Add new object superproperty
   - #variantNameEntity
 
-Changes from 2024-12-03 to 2025-04-08
+*Changes from 2024-12-03 to 2025-04-08
 
 Add new object property
   - #variantNameEntityForTheCorporateBody
@@ -44,7 +54,7 @@ Add new object property
   - #variantNameEntityForThePlaceOrGeographicName
   - #variantNameEntityForThePerson
 
-*Changes from 2023-09-20 to 2024-12-02
+Changes from 2023-09-20 to 2024-12-02
 
 Add new datatype property
   - #pseudonymNameOfThePerson
@@ -3545,7 +3555,7 @@ Changes from 2019-10-15 to 2022-02-08
     rdfs:isDefinedBy <https://d-nb.info/standards/elementset/gnd#> ;
     rdfs:label "In Beziehung stehende Konferenz oder Veranstaltung"@de, "Related conference or event"@en ;
     rdfs:range :ConferenceOrEvent ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50218> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50218>, :relatedEntity ;
     :marc21equivalent "511 $0 $4=rela" .
 
 :relatedCorporateBody
@@ -3564,7 +3574,7 @@ Changes from 2019-10-15 to 2022-02-08
     rdfs:isDefinedBy <https://d-nb.info/standards/elementset/gnd#> ;
     rdfs:label "In Beziehung stehende Körperschaft"@de, "Related Corporate Body"@en ;
     rdfs:range :CorporateBody ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50218>, <https://d-nb.info/standards/elementset/agrelon#relatedAgent> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50218>, <https://d-nb.info/standards/elementset/agrelon#relatedAgent>, :relatedEntity ;
     :marc21equivalent "510 $0 $4=rela" .
 
 :relatedDdcWithDegreeOfDeterminacy1
@@ -3645,6 +3655,10 @@ Changes from 2019-10-15 to 2022-02-08
       Determiniertheitsgrad 4"""@de, """Related Dewey Decimal Classification with degree of determinacy
       4"""@en .
 
+:relatedEntity a rdf:Property, owl:ObjectProperty ;
+    rdfs:isDefinedBy <https://d-nb.info/standards/elementset/gnd#> ;
+    rdfs:label "In Beziehung stehende Entität"@de, "Related entity"@en .
+
 :relatedFamily
     a rdf:Property, owl:ObjectProperty ;
     rdfs:domain [
@@ -3661,7 +3675,7 @@ Changes from 2019-10-15 to 2022-02-08
     rdfs:isDefinedBy <https://d-nb.info/standards/elementset/gnd#> ;
     rdfs:label "In Beziehung stehende Familie"@de, "Related family"@en ;
     rdfs:range :Family ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50219>, <https://d-nb.info/standards/elementset/agrelon#relatedAgent> .
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50219>, <https://d-nb.info/standards/elementset/agrelon#relatedAgent>, :relatedEntity.
 
 :relatedMapping
     a rdf:Property, owl:ObjectProperty ;
@@ -3686,7 +3700,7 @@ Changes from 2019-10-15 to 2022-02-08
     rdfs:isDefinedBy <https://d-nb.info/standards/elementset/gnd#> ;
     rdfs:label "In Beziehung stehende Person"@de, "Related person"@en ;
     rdfs:range :DifferentiatedPerson ;
-    rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50220>, <https://d-nb.info/standards/elementset/agrelon#relatedAgent> ;
+    rdfs:subPropertyOf <http://rdaregistry.info/Elements/a/P50220>, <https://d-nb.info/standards/elementset/agrelon#relatedAgent>, :relatedEntity ;
     :marc21equivalent "500 $0 $4=rela" .
 
 :relatedPlaceOrGeographicName
@@ -3705,6 +3719,7 @@ Changes from 2019-10-15 to 2022-02-08
     rdfs:isDefinedBy <https://d-nb.info/standards/elementset/gnd#> ;
     rdfs:label "In Beziehung stehendes Geografikum"@de, "Related place or geographic name"@en ;
     rdfs:range :PlaceOrGeographicName ;
+    rdfs:subPropertyOf :relatedEntity ;
     :marc21equivalent "551 $0 $4=geoa", "551 $0 $4=rela" .
 
 :relatedSubjecHeading
@@ -3744,6 +3759,7 @@ Changes from 2019-10-15 to 2022-02-08
     rdfs:isDefinedBy <https://d-nb.info/standards/elementset/gnd#> ;
     rdfs:label "In Beziehung stehendes Schlagwort"@de, "Related subject heading"@en ;
     rdfs:range :SubjectHeading ;
+    rdfs:subPropertyOf :relatedEntity ;
     :marc21equivalent "550 $0 $4=rela" .
 
 :relatedTerm
@@ -3781,6 +3797,7 @@ Changes from 2019-10-15 to 2022-02-08
             :Work
         )
     ] ;
+    rdfs:subPropertyOf :relatedEntity ;
     :marc21equivalent "500 $0 $4=vbal", "510 $0 $4=vbal", "511 $0 $4=vbal", "530 $0 $4=vbal", "550 $0 $4=vbal", "551 $0 $4=vbal" .
 
 :relatedWork
@@ -3799,6 +3816,7 @@ Changes from 2019-10-15 to 2022-02-08
     rdfs:isDefinedBy <https://d-nb.info/standards/elementset/gnd#> ;
     rdfs:label "In Beziehung stehendes Werk"@de, "Related work"@en ;
     rdfs:range :Work ;
+    rdfs:subPropertyOf :relatedEntity ;
     :marc21equivalent "530 $0 $4=rela" .
 
 :restorer
